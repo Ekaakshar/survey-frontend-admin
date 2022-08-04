@@ -1,0 +1,28 @@
+{
+  "id": null,
+  "question": null,
+  "type": true,
+  "multiSelect": true,
+  "characterLimited": false,
+  "hasMinMax": false,
+  "allowDecimals": false,
+  "sequence": null,
+  "minValue": 1,
+  "maxValue": 8,
+  "labels": [],
+  "dateFormat": "DD/MM/YYYY",
+  "timeFormat": "12",
+  "intervals": 2,
+  "textLimit": 1024,
+  "units": null,
+  "options": [
+    {
+      "body": null,
+      "sequence": 1
+    },
+    {
+      "body": null,
+      "sequence": 2
+    }
+  ]
+}

@@ -88,10 +88,14 @@ var config = {
 
 axios(config)
 .then(function (response) {
-  console.log(JSON.stringify(response.data));
+  console.log(response.data.token);
+     var token = response.data.token;
+     localStorage.setItem('ADMN_SESSION', JSON.stringify(token));
+     window.location.href = "/";
 })
 .catch(function (error) {
-  console.log(error);
+  console.log(error.response.data.message);
+  alert(error.response.data.message);
 });
       } else {
          this.errorMessage = "password did not match"
