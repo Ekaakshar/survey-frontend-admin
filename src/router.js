@@ -126,6 +126,49 @@ const routes =  [
     }
   },
   {
+    path: "/surveys",
+    name: "surveys",
+    component: () => import("./views/SurveysList.vue"),
+    beforeEnter: (to, from, next) => {
+      guard(to, from, next);
+    }
+  },
+  {
+    path: "/survey/edit/:id",
+    name: "surveyedit",
+    component: () => import("./views/EditSurvey.vue"),
+    props: true,
+    beforeEnter: (to, from, next) => {
+      guard(to, from, next);
+    }
+  },
+  {
+    path: "/survey/completed/:id",
+    name: "surveycompleted",
+    component: () => import("./views/CompletedSurveysList.vue"),
+    props: true,
+    beforeEnter: (to, from, next) => {
+      guard(to, from, next);
+    }
+  },
+  {
+    path: "/survey/compltedview/:id",
+    name: "surveyview",
+    component: () => import("./views/CompletedSurveyView.vue"),
+    props: true,
+    beforeEnter: (to, from, next) => {
+      guard(to, from, next);
+    }
+  },
+  {
+    path: "/survey/add",
+    name: "surveyadd",
+    component: () => import("./views/AddSurvey.vue"),
+    beforeEnter: (to, from, next) => {
+      guard(to, from, next);
+    }
+  },
+  {
     path: "/addLesson",
     name: "addLesson",
     component: () => import("./views/AddLesson.vue"),
